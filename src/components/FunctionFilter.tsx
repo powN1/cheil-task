@@ -1,7 +1,7 @@
 import type { FilterProps } from "../types/types";
 import Dropdown from "./Dropdown";
 
-function FunctionFilter({ value, onChange }: FilterProps<string[] | null>) {
+function FunctionFilter({ value, onChange }: FilterProps<string[]>) {
   const options = [
     "Wszystkie",
     "Drzwi AddWash™",

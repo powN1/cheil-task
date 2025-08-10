@@ -156,7 +156,6 @@ export default function ProductsSection() {
         </div>
 
         {/* Show more button */}
-        {console.log(products.length > productCount || totalFilteredCount > productCount)}
 
         {products.length > productCount && totalFilteredCount > productCount ? (
           <button

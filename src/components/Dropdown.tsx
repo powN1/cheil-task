@@ -5,7 +5,7 @@ interface DropdownProps<T> {
   options: string[];
   selected: T;
   multiple?: boolean;
-  onChange: React.Dispatch<React.SetStateAction<string | string[] | null>>;
+  onChange: React.Dispatch<React.SetStateAction<T>>;
 }
 
 function Dropdown<T extends string | string[] | null>({
@@ -22,20 +22,18 @@ function Dropdown<T extends string | string[] | null>({
   const toggleOption = (opt: string) => {
     if (!multiple) {
       onChange(() => {
-        // If single option  then return null as expected in state
-        if (opt === "Wszystkie") return null;
-        return opt;
+        if (opt === "Wszystkie") return null as T;
+        return opt as T;
       });
       setOpen(false);
     } else {
       onChange((prev) => {
-        // If multiple options then return [] as expected in state
-        if (opt === "Wszystkie") return [];
+        if (opt === "Wszystkie") return [] as unknown as T;
         const arr = Array.isArray(prev) ? [...prev] : [];
         if (arr.includes(opt)) {
-          return arr.filter((o) => o !== opt);
+          return arr.filter((o) => o !== opt) as T;
         }
-        return [...arr, opt];
+        return [...arr, opt] as T;
       });
       if (opt === "Wszystkie") setOpen(false);
     }
