@@ -1,8 +1,8 @@
 import type { FilterProps } from "../types/types";
 import Dropdown from "./Dropdown";
 
-function CapacityFilter({ value, onChange }: FilterProps<string | number>) {
-  const options = ["wszystkie", 9, 6, 10.5];
+function CapacityFilter({ value, onChange }: FilterProps<string | null>) {
+  const options = ["Wszystkie", "6kg", "9kg", "10.5kg"];
 
   return <Dropdown label="Pojemność" options={options} selected={value} onChange={onChange} />;
 }

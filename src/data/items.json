@@ -5,13 +5,13 @@
     "img": "/washingMachine1.webp",
     "type": "QuickDrive™",
     "color": "biała",
-    "capacity": 9,
+    "capacity": "9kg",
     "dimensions": {
       "width": 60,
       "height": 85,
       "depth": 55
     },
-    "functions": ["Drzwi AddWash™", "Panel AI Control", "Silnik inwerterowy", "Wyświetlacz elektroniczny"],
+    "functions": ["Drzwi AddWash™", "Panel AI Control", "Silnik inwerterowy"],
     "energeticEfficiency": "A",
     "price": 3399,
     "priceDate": {
@@ -26,7 +26,7 @@
     "img": "/washingMachine2.webp",
     "type": "EcoBubble™",
     "color": "biała",
-    "capacity": 10.5,
+    "capacity": "10.5kg",
     "dimensions": {
       "width": 60,
       "height": 85,
@@ -47,7 +47,7 @@
     "img": "/washingMachine3.webp",
     "type": "SensiCare™",
     "color": "biała",
-    "capacity": 6,
+    "capacity": "6kg",
     "dimensions": {
       "width": 60,
       "height": 85,
@@ -68,13 +68,13 @@
     "img": "/washingMachine1.webp",
     "type": "QuickDrive™",
     "color": "biała",
-    "capacity": 9,
+    "capacity": "9kg",
     "dimensions": {
       "width": 60,
       "height": 85,
       "depth": 55
     },
-    "functions": ["Drzwi AddWash™", "Panel AI Control", "Silnik inwerterowy", "Wyświetlacz elektroniczny"],
+    "functions": ["Drzwi AddWash™", "Panel AI Control", "Silnik inwerterowy"],
     "energeticEfficiency": "A",
     "price": 3399,
     "priceDate": {
@@ -89,7 +89,7 @@
     "img": "/washingMachine2.webp",
     "type": "EcoBubble™",
     "color": "biała",
-    "capacity": 10.5,
+    "capacity": "10.5kg",
     "dimensions": {
       "width": 60,
       "height": 85,
@@ -109,7 +109,7 @@
     "img": "/washingMachine3.webp",
     "type": "SensiCare™",
     "color": "biała",
-    "capacity": 6,
+    "capacity": "6kg",
     "dimensions": {
       "width": 60,
       "height": 85,
@@ -130,13 +130,13 @@
     "img": "/washingMachine1.webp",
     "type": "QuickDrive™",
     "color": "biała",
-    "capacity": 9,
+    "capacity": "9kg",
     "dimensions": {
       "width": 60,
       "height": 85,
       "depth": 55
     },
-    "functions": ["Drzwi AddWash™", "Panel AI Control", "Silnik inwerterowy", "Wyświetlacz elektroniczny"],
+    "functions": ["Drzwi AddWash™", "Panel AI Control", "Silnik inwerterowy"],
     "energeticEfficiency": "A",
     "price": 3399,
     "priceDate": {
@@ -151,7 +151,7 @@
     "img": "/washingMachine2.webp",
     "type": "EcoBubble™",
     "color": "biała",
-    "capacity": 10.5,
+    "capacity": "10.5kg",
     "dimensions": {
       "width": 60,
       "height": 85,
@@ -171,7 +171,7 @@
     "img": "/washingMachine3.webp",
     "type": "SensiCare™",
     "color": "biała",
-    "capacity": 6,
+    "capacity": "6kg",
     "dimensions": {
       "width": 60,
       "height": 85,
@@ -191,13 +191,13 @@
     "img": "/washingMachine1.webp",
     "type": "QuickDrive™",
     "color": "biała",
-    "capacity": 9,
+    "capacity": "9kg",
     "dimensions": {
       "width": 60,
       "height": 85,
       "depth": 55
     },
-    "functions": ["Drzwi AddWash™", "Panel AI Control", "Silnik inwerterowy", "Wyświetlacz elektroniczny"],
+    "functions": ["Drzwi AddWash™", "Panel AI Control", "Silnik inwerterowy"],
     "energeticEfficiency": "A",
     "price": 3399,
     "priceDate": {

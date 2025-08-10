@@ -1,16 +1,53 @@
 import { useEffect, useRef, useState } from "react";
 
-interface DropdownProps<T extends string | number> {
+interface DropdownProps<T> {
   label: string;
-  options: T[];
-  selected: T | null;
-  onChange: React.Dispatch<React.SetStateAction<T | null>>;
+  options: string[];
+  selected: T;
+  multiple?: boolean;
+  onChange: React.Dispatch<React.SetStateAction<string | string[] | null>>;
 }
 
-function Dropdown<T extends string | number>({ label, options, selected, onChange }: DropdownProps<T>) {
+function Dropdown<T extends string | string[] | null>({
+  label,
+  options,
+  selected,
+  multiple = false,
+  onChange,
+}: DropdownProps<T>) {
   const [open, setOpen] = useState(false);
 
   const menuRef = useRef<HTMLDivElement | null>(null);
+
+  const toggleOption = (opt: string) => {
+    if (!multiple) {
+      onChange(() => {
+        // If single option  then return null as expected in state
+        if (opt === "Wszystkie") return null;
+        return opt;
+      });
+      setOpen(false);
+    } else {
+      onChange((prev) => {
+        // If multiple options then return [] as expected in state
+        if (opt === "Wszystkie") return [];
+        const arr = Array.isArray(prev) ? [...prev] : [];
+        if (arr.includes(opt)) {
+          return arr.filter((o) => o !== opt);
+        }
+        return [...arr, opt];
+      });
+      if (opt === "Wszystkie") setOpen(false);
+    }
+  };
+
+  const renderLabel = () => {
+    if (multiple) {
+      const arr = Array.isArray(selected) ? selected : [];
+      return arr.length > 0 ? arr.join(", ") : "Pokaż wszystkie";
+    }
+    return selected || "Pokaż wszystkie";
+  };
 
   // Close when click outside
   useEffect(() => {
@@ -36,32 +73,31 @@ function Dropdown<T extends string | number>({ label, options, selected, onChang
       <div>
         <p className="font-bold text-lg">{label}:</p>
         <div
-          className="flex items-center justify-between h-[36px] leading-[36px] bg-white px-3 cursor-pointer capitalize"
+          className="flex items-center justify-between h-[36px] leading-[36px] bg-white px-3 cursor-pointer"
           onClick={() => setOpen((prev) => !prev)}
         >
-          {selected || "pokaż wszystkie"}
+          <p className="text-ellipsis line-clamp-1">{renderLabel()}</p>
 
           <div className="border-l-[6px] border-l-transparent border-t-[10px] border-t-arrow border-r-[6px] border-r-transparent mr-2" />
         </div>
       </div>
       {open && (
-        <div className="z-1 w-full absolute top-[100%] left-0 mt-2 bg-white [box-shadow:_2px_2px_10px_0px_rgb(0_0_0_/_10%)]">
-          {options.map((opt, i) => (
-            <div
-              key={i}
-              className="h-[36px] leading-[36px] px-3 cursor-pointer capitalize hover:bg-[var(--dropdown-bg)]"
-              onClick={() => {
-                setOpen(false);
-                onChange(() => {
-                  if (opt === "wszystkie") return null;
-                  return opt;
-                });
-              }}
-            >
-              {opt}
-              {label.toLowerCase() === "pojemność" && (typeof opt === "number" ? "kg" : "")}
-            </div>
-          ))}
+        <div className="z-10 w-full absolute top-[100%] left-0 mt-2 bg-white [box-shadow:_2px_2px_10px_0px_rgb(0_0_0_/_10%)]">
+          {options.map((opt, i) => {
+            const isSelected = multiple ? Array.isArray(selected) && selected.includes(opt) : selected === opt;
+            return (
+              <div
+                key={i}
+                className={`h-[36px] leading-[36px] px-3 cursor-pointer flex justify-between hover:bg-[var(--dropdown-bg)] ${
+                  isSelected ? "bg-[var(--dropdown-bg)]" : ""
+                }`}
+                onClick={() => toggleOption(opt)}
+              >
+                <span>{opt}</span>
+                {multiple && isSelected && <span>✓</span>}
+              </div>
+            );
+          })}
         </div>
       )}
     </div>

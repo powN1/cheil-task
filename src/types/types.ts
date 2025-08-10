@@ -15,7 +15,7 @@ export interface ProductInterface {
   img: string;
   type: string;
   color: string;
-  capacity: number;
+  capacity: string;
   dimensions: Dimensions;
   functions: string[];
   energeticEfficiency: string;
@@ -24,7 +24,7 @@ export interface ProductInterface {
   installment?: number;
 }
 
-export interface FilterProps<T extends string | number> {
-  value: T | null;
-  onChange: React.Dispatch<React.SetStateAction<T | null>>;
+export interface FilterProps<T = string | null> {
+  value: T;
+  onChange: React.Dispatch<React.SetStateAction<T>>;
 }

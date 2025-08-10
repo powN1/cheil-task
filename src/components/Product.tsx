@@ -24,14 +24,14 @@ export default function Product({ product, isSelected, handleProductSelection }:
   return (
     <div className="flex flex-col gap-y-6 p-6 bg-white rounded-xl">
       <div className="w-2/3 self-center">
-        <img src={img} alt="product name" className="w-full h-full" />
+        <img src={`${import.meta.env.VITE_BASE}${img}`} alt="product name" className="w-full h-full" />
       </div>
       <h3 className="text-lg font-semibold">
-        {name}, Pralka {type}, {capacity}kg, {color}
+        {name}, Pralka {type}, {capacity.replace(".", ",")}, {color}
       </h3>
       <div className="flex flex-col space-y-1 text-description text-xs">
         <p>
-          Pojemność (kg): <span className="text-black font-bold">{capacity.toString().replace(".", ",")}</span>
+          Pojemność (kg): <span className="text-black font-bold">{capacity.replace(".", ",")}</span>
         </p>
         <p>
           Wymiary (GxSxW):{" "}
