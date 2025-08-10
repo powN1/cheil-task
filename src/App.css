@@ -1,7 +1,30 @@
+@import url("https://fonts.cdnfonts.com/css/samsungone");
 @import "tailwindcss";
 
 #root {
   box-sizing: border-box;
+  font-family: "SamsungOne", Arial, Helvetica;
   padding: 0;
   margin: 0;
+}
+:root {
+  --button-select: #1428a0;
+  --button-selected: #1c1c1c;
+  --efficiency: #009949;
+  --load-more: #007aff;
+  --description: #767676;
+  --section-bg: #f8f8f8;
+  --dropdown-bg: #f3f3f3;
+  --arrow: #8d8d8d;
+}
+
+@theme inline {
+  --color-button-select: var(--button-select);
+  --color-button-selected: var(--button-selected);
+  --color-efficiency: var(--efficiency);
+  --color-load-more: var(--load-more);
+  --color-description: var(--description);
+  --color-section-bg: var(--section-bg);
+  --color-dropdown-bg: var(--dropdown-bg);
+  --color-arrow: var(--arrow);
 }

@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "name": "WW90T754ABT",
+    "img": "/washingMachine1.webp",
+    "type": "QuickDrive™",
+    "color": "biała",
+    "capacity": 9,
+    "dimensions": {
+      "width": 60,
+      "height": 85,
+      "depth": 55
+    },
+    "functions": ["Drzwi AddWash™", "Panel AI Control", "Silnik inwerterowy", "Wyświetlacz elektroniczny"],
+    "energeticEfficiency": "A",
+    "price": 3399,
+    "priceDate": {
+      "priceStart": "2022-09-10",
+      "priceEnd": "2022-09-24"
+    },
+    "installment": 60
+  },
+  {
+    "id": 2,
+    "name": "WW10T654DLH",
+    "img": "/washingMachine2.webp",
+    "type": "EcoBubble™",
+    "color": "biała",
+    "capacity": 10.5,
+    "dimensions": {
+      "width": 60,
+      "height": 85,
+      "depth": 55
+    },
+    "functions": ["Drzwi AddWash™", "Panel AI Control", "Silnik inwerterowy", "Wyświetlacz elektroniczny"],
+    "energeticEfficiency": "B",
+    "price": 2999,
+    "priceDate": {
+      "priceStart": "2022-09-10",
+      "priceEnd": "2022-09-24"
+    },
+    "installment": 60
+  },
+  {
+    "id": 3,
+    "name": "WW50L881DMS",
+    "img": "/washingMachine3.webp",
+    "type": "SensiCare™",
+    "color": "biała",
+    "capacity": 6,
+    "dimensions": {
+      "width": 60,
+      "height": 85,
+      "depth": 45
+    },
+    "functions": ["Panel AI Control", "Silnik inwerterowy", "Wyświetlacz elektroniczny"],
+    "energeticEfficiency": "D",
+    "price": 3199,
+    "priceDate": {
+      "priceStart": "2022-09-10",
+      "priceEnd": "2022-09-24"
+    },
+    "installment": 60
+  },
+  {
+    "id": 4,
+    "name": "WW90T754ABT",
+    "img": "/washingMachine1.webp",
+    "type": "QuickDrive™",
+    "color": "biała",
+    "capacity": 9,
+    "dimensions": {
+      "width": 60,
+      "height": 85,
+      "depth": 55
+    },
+    "functions": ["Drzwi AddWash™", "Panel AI Control", "Silnik inwerterowy", "Wyświetlacz elektroniczny"],
+    "energeticEfficiency": "A",
+    "price": 3399,
+    "priceDate": {
+      "priceStart": "2022-09-10",
+      "priceEnd": "2022-09-24"
+    },
+    "installment": 60
+  },
+  {
+    "id": 5,
+    "name": "WW10T654DLH",
+    "img": "/washingMachine2.webp",
+    "type": "EcoBubble™",
+    "color": "biała",
+    "capacity": 10.5,
+    "dimensions": {
+      "width": 60,
+      "height": 85,
+      "depth": 55
+    },
+    "functions": ["Drzwi AddWash™", "Panel AI Control", "Silnik inwerterowy", "Wyświetlacz elektroniczny"],
+    "energeticEfficiency": "B",
+    "price": 2999,
+    "priceDate": {
+      "priceStart": "2022-09-10",
+      "priceEnd": "2022-09-24"
+    },
+    "installment": 60
+  },
+  {
+    "id": 6,
+    "name": "WW50L881DMS",
+    "img": "/washingMachine3.webp",
+    "type": "SensiCare™",
+    "color": "biała",
+    "capacity": 6,
+    "dimensions": {
+      "width": 60,
+      "height": 85,
+      "depth": 45
+    },
+    "functions": ["Panel AI Control", "Silnik inwerterowy", "Wyświetlacz elektroniczny"],
+    "energeticEfficiency": "D",
+    "price": 3199,
+    "priceDate": {
+      "priceStart": "2022-09-10",
+      "priceEnd": "2022-09-24"
+    },
+    "installment": 60
+  },
+  {
+    "id": 7,
+    "name": "WW90T754ABT",
+    "img": "/washingMachine1.webp",
+    "type": "QuickDrive™",
+    "color": "biała",
+    "capacity": 9,
+    "dimensions": {
+      "width": 60,
+      "height": 85,
+      "depth": 55
+    },
+    "functions": ["Drzwi AddWash™", "Panel AI Control", "Silnik inwerterowy", "Wyświetlacz elektroniczny"],
+    "energeticEfficiency": "A",
+    "price": 3399,
+    "priceDate": {
+      "priceStart": "2022-09-10",
+      "priceEnd": "2022-09-24"
+    },
+    "installment": 60
+  },
+  {
+    "id": 8,
+    "name": "WW10T654DLH",
+    "img": "/washingMachine2.webp",
+    "type": "EcoBubble™",
+    "color": "biała",
+    "capacity": 10.5,
+    "dimensions": {
+      "width": 60,
+      "height": 85,
+      "depth": 55
+    },
+    "functions": ["Drzwi AddWash™", "Panel AI Control", "Silnik inwerterowy", "Wyświetlacz elektroniczny"],
+    "energeticEfficiency": "B",
+    "price": 2999,
+    "priceDate": {
+      "priceStart": "2022-09-10",
+      "priceEnd": "2022-09-24"
+    },
+    "installment": 60
+  },
+  {
+    "id": 9,
+    "name": "WW50L881DMS",
+    "img": "/washingMachine3.webp",
+    "type": "SensiCare™",
+    "color": "biała",
+    "capacity": 6,
+    "dimensions": {
+      "width": 60,
+      "height": 85,
+      "depth": 45
+    },
+    "functions": ["Panel AI Control", "Silnik inwerterowy", "Wyświetlacz elektroniczny"],
+    "energeticEfficiency": "D",
+    "price": 3199,
+    "priceDate": {
+      "priceStart": "2022-09-10",
+      "priceEnd": "2022-09-24"
+    },
+    "installment": 60
+  },
+  {
+    "id": 10,
+    "name": "WW90T754ABT",
+    "img": "/washingMachine1.webp",
+    "type": "QuickDrive™",
+    "color": "biała",
+    "capacity": 9,
+    "dimensions": {
+      "width": 60,
+      "height": 85,
+      "depth": 55
+    },
+    "functions": ["Drzwi AddWash™", "Panel AI Control", "Silnik inwerterowy", "Wyświetlacz elektroniczny"],
+    "energeticEfficiency": "A",
+    "price": 3399,
+    "priceDate": {
+      "priceStart": "2022-09-10",
+      "priceEnd": "2022-09-24"
+    },
+    "installment": 60
+  }
+]
