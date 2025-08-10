@@ -20,7 +20,7 @@ export interface ProductInterface {
   functions: string[];
   energeticEfficiency: string;
   price: number;
-  priceDate: PriceDate;
+  priceDate?: PriceDate;
   installment?: number;
 }
 

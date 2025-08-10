@@ -101,8 +101,7 @@
     "priceDate": {
       "priceStart": "2022-09-10",
       "priceEnd": "2022-09-24"
-    },
-    "installment": 60
+    }
   },
   {
     "id": 6,
@@ -164,8 +163,7 @@
     "priceDate": {
       "priceStart": "2022-09-10",
       "priceEnd": "2022-09-24"
-    },
-    "installment": 60
+    }
   },
   {
     "id": 9,
@@ -185,8 +183,7 @@
     "priceDate": {
       "priceStart": "2022-09-10",
       "priceEnd": "2022-09-24"
-    },
-    "installment": 60
+    }
   },
   {
     "id": 10,

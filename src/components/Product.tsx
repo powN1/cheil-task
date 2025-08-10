@@ -18,7 +18,7 @@ export default function Product({ product, isSelected, handleProductSelection }:
     functions,
     energeticEfficiency,
     price,
-    priceDate: { priceStart, priceEnd },
+    priceDate: { priceStart, priceEnd } = {},
     installment,
   } = product;
   return (
@@ -82,7 +82,7 @@ export default function Product({ product, isSelected, handleProductSelection }:
         }
         onClick={() => handleProductSelection(id)}
       >
-          {isSelected ? "wybrane" : "wybierz"}
+        {isSelected ? "wybrane" : "wybierz"}
       </button>
     </div>
   );

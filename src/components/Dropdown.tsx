@@ -32,7 +32,7 @@ function Dropdown<T extends string | number>({ label, options, selected, onChang
   }, [open]);
 
   return (
-    <div className="z-1 w-full relative text-sm" ref={menuRef}>
+    <div className="w-full relative text-sm" ref={menuRef}>
       <div>
         <p className="font-bold text-lg">{label}:</p>
         <div
@@ -45,7 +45,7 @@ function Dropdown<T extends string | number>({ label, options, selected, onChang
         </div>
       </div>
       {open && (
-        <div className="w-full absolute top-[100%] left-0 mt-2 bg-white [box-shadow:_2px_2px_10px_0px_rgb(0_0_0_/_10%)]">
+        <div className="z-1 w-full absolute top-[100%] left-0 mt-2 bg-white [box-shadow:_2px_2px_10px_0px_rgb(0_0_0_/_10%)]">
           {options.map((opt, i) => (
             <div
               key={i}
