@@ -180,7 +180,7 @@ export default function ProductsSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[16px] transition-all">
           {productsToShow.map((product, i) => (
             <Product
-              ref={(el) => (productRefs.current[i] = el)}
+              ref={(el) => { productRefs.current[i] = el; }}
               key={i}
               product={product}
               isSelected={selectedProducts.some((p) => p.id === product.id)}

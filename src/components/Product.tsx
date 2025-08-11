@@ -1,13 +1,13 @@
+import { forwardRef } from "react";
 import type { ProductInterface } from "../types/types";
 
 type ProductProps = {
   product: ProductInterface;
-  ref: React.RefObject<(HTMLDivElement | null)[]>;
   isSelected: boolean;
   handleProductSelection: (id: number) => void;
 };
 
-export default function Product({ ref, product, isSelected, handleProductSelection }: ProductProps) {
+const Product = forwardRef<HTMLDivElement, ProductProps>(({ product, isSelected, handleProductSelection }, ref) => {
   const {
     id,
     name,
@@ -87,4 +87,8 @@ export default function Product({ ref, product, isSelected, handleProductSelecti
       </button>
     </div>
   );
-}
+});
+
+Product.displayName = "Product";
+
+export default Product;
