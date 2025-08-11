@@ -54,7 +54,7 @@
       "depth": 45
     },
     "functions": ["Panel AI Control", "Silnik inwerterowy", "Wyświetlacz elektroniczny"],
-    "energeticEfficiency": "D",
+    "energeticEfficiency": "F",
     "price": 3199,
     "priceDate": {
       "priceStart": "2022-09-10",
@@ -116,7 +116,7 @@
       "depth": 45
     },
     "functions": ["Panel AI Control", "Silnik inwerterowy", "Wyświetlacz elektroniczny"],
-    "energeticEfficiency": "D",
+    "energeticEfficiency": "F",
     "price": 3199,
     "priceDate": {
       "priceStart": "2022-09-10",
@@ -178,7 +178,7 @@
       "depth": 45
     },
     "functions": ["Panel AI Control", "Silnik inwerterowy", "Wyświetlacz elektroniczny"],
-    "energeticEfficiency": "D",
+    "energeticEfficiency": "F",
     "price": 3199,
     "priceDate": {
       "priceStart": "2022-09-10",

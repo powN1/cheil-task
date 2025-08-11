@@ -11,6 +11,13 @@
   --button-select: #1428a0;
   --button-selected: #1c1c1c;
   --efficiency: #009949;
+  --efficiency-a: #008540;
+  --efficiency-b: #50af31;
+  --efficiency-c: #c7d301;
+  --efficiency-d: #ffed00;
+  --efficiency-e: #fbb900;
+  --efficiency-f: #ec6707;
+  --efficiency-g: #e30613;
   --load-more: #007aff;
   --description: #767676;
   --section-bg: #f8f8f8;
@@ -22,6 +29,13 @@
   --color-button-select: var(--button-select);
   --color-button-selected: var(--button-selected);
   --color-efficiency: var(--efficiency);
+  --color-efficiency-a: var(--efficiency-a);
+  --color-efficiency-b: var(--efficiency-b);
+  --color-efficiency-c: var(--efficiency-c);
+  --color-efficiency-d: var(--efficiency-d);
+  --color-efficiency-e: var(--efficiency-e);
+  --color-efficiency-f: var(--efficiency-f);
+  --color-efficiency-g: var(--efficiency-g);
   --color-load-more: var(--load-more);
   --color-description: var(--description);
   --color-section-bg: var(--section-bg);

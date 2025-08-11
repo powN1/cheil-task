@@ -7,6 +7,16 @@ type ProductProps = {
   handleProductSelection: (id: number) => void;
 };
 
+const efficiencyColors: Record<string, { bg: string; border: string }> = {
+  A: { bg: "bg-efficiency-a", border: "border-l-efficiency-a" },
+  B: { bg: "bg-efficiency-b", border: "border-l-efficiency-b" },
+  C: { bg: "bg-efficiency-c", border: "border-l-efficiency-c" },
+  D: { bg: "bg-efficiency-d", border: "border-l-efficiency-d" },
+  E: { bg: "bg-efficiency-e", border: "border-l-efficiency-e" },
+  F: { bg: "bg-efficiency-f", border: "border-l-efficiency-f" },
+  G: { bg: "bg-efficiency-g", border: "border-l-efficiency-g" },
+};
+
 const Product = forwardRef<HTMLDivElement, ProductProps>(({ product, isSelected, handleProductSelection }, ref) => {
   const {
     id,
@@ -22,6 +32,7 @@ const Product = forwardRef<HTMLDivElement, ProductProps>(({ product, isSelected,
     priceDate: { priceStart, priceEnd } = {},
     installment,
   } = product;
+
   return (
     <div ref={ref} className="flex flex-col gap-y-6 p-6 bg-white rounded-xl">
       <div className="w-2/3 self-center">
@@ -46,13 +57,15 @@ const Product = forwardRef<HTMLDivElement, ProductProps>(({ product, isSelected,
         <div className="my-4 flex items-center gap-x-2">
           Klasa energetyczna:{" "}
           <div className="h-[18px] flex items-center text-white">
-            <p className="bg-efficiency px-2 leading-[18px] w-[40px] h-full">{energeticEfficiency}</p>
+            <p className={`${efficiencyColors[energeticEfficiency]?.bg} px-2 leading-[18px] w-[40px] h-full`}>
+              {energeticEfficiency}
+            </p>
             <div
-              className="
-  border-t-[9px] border-t-transparent
-  border-l-[9px] border-l-efficiency
-  border-b-[9px] border-b-transparent"
-            ></div>
+              className={`
+                border-t-[9px] border-t-transparent
+                border-l-[9px] ${efficiencyColors[energeticEfficiency]?.border}
+                border-b-[9px] border-b-transparent`}
+            />
           </div>
         </div>
         <div className="flex flex-col">
@@ -79,7 +92,7 @@ const Product = forwardRef<HTMLDivElement, ProductProps>(({ product, isSelected,
       <button
         className={
           "h-[36px] w-[150px] mt-auto uppercase text-white text-sm font-bold rounded-full self-center cursor-pointer " +
-          (isSelected ? "bg-button-selected" : "bg-button-select")
+          (isSelected ? "bg-button-selected hover:bg-button-selected/90" : "bg-button-select hover:bg-button-select/90")
         }
         onClick={() => handleProductSelection(id)}
       >

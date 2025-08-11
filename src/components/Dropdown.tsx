@@ -80,7 +80,7 @@ function Dropdown<T extends string | string[] | null>({
         </div>
       </div>
       {open && (
-        <div className="z-10 w-full absolute top-[100%] left-0 mt-2 bg-white [box-shadow:_2px_2px_10px_0px_rgb(0_0_0_/_10%)]">
+        <div className="z-10 w-full absolute max-h-[180px] overflow-y-auto top-[100%] left-0 mt-2 bg-white [box-shadow:_2px_2px_10px_0px_rgb(0_0_0_/_10%)]">
           {options.map((opt, i) => {
             const isSelected = multiple ? Array.isArray(selected) && selected.includes(opt) : selected === opt;
             return (
