@@ -1,7 +1,7 @@
 import { useSearchParams } from "react-router-dom";
 import Product from "./Product";
 import products from "../data/items.json";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { ProductInterface } from "../types/types.ts";
 import SearchInput from "./SearchInput.tsx";
 import SortFilter from "./SortFilter.tsx";
@@ -13,7 +13,8 @@ export default function ProductsSection() {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const [productsToShow, setProductsToShow] = useState<ProductInterface[]>([]);
-  const [productCount, setProductCount] = useState(3);
+  const [productCountDevice, setProductCountDevice] = useState(3);
+  const [productCount, setProductCount] = useState(productCountDevice);
   const [totalFilteredCount, setTotalFilteredCount] = useState(0);
 
   // Filters
@@ -26,6 +27,37 @@ export default function ProductsSection() {
   const [selectedProducts, setSelectedProducts] = useState<ProductInterface[]>([]);
 
   const [debouncedSearch, setDebouncedSearch] = useState(searchTerm);
+
+  const productRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  // Show x products depending on the device/view
+  useEffect(() => {
+    const updateProductCount = () => {
+      const width = window.innerWidth;
+
+      // Products to show count
+      if (width < 640) {
+        // Mobile
+        setProductCountDevice(2);
+      } else if (width >= 640 && width < 1024) {
+        // Tablet
+        setProductCountDevice(2);
+      } else {
+        // Desktop
+        setProductCountDevice(3);
+      }
+    };
+
+    updateProductCount();
+
+    window.addEventListener("resize", updateProductCount);
+    return () => window.removeEventListener("resize", updateProductCount);
+  }, []);
+
+  // Assign product count on mount
+  useEffect(() => {
+    setProductCount(productCountDevice);
+  }, [productCountDevice]);
 
   // Debounce
   useEffect(() => {
@@ -93,18 +125,19 @@ export default function ProductsSection() {
   const handleShowMore = () => {
     if (productCount >= products.length) return;
     setProductCount((prev) => {
-      // If productCount is bigger then the amount of products then increase it by +3
-      if (products.length - prev >= 3) return prev + 3;
+      // If productCount is bigger then the amount of products then increase it by 2 or 3 (depending on the device)
+      if (products.length - prev >= productCountDevice) return prev + productCountDevice;
       // Otherwise add the difference of products and product count
       else return prev + (products.length - prev);
     });
 
     // Animation
     setTimeout(() => {
-      window.scrollTo({
-        top: document.body.scrollHeight,
-        behavior: "smooth",
-      });
+      // Scroll to the first newly shown product (better for mobile devices)
+      const firstNewProductRef = productRefs.current[productCount];
+      if (firstNewProductRef) {
+        firstNewProductRef.scrollIntoView({ behavior: "smooth" });
+      }
     }, 10);
   };
 
@@ -145,9 +178,10 @@ export default function ProductsSection() {
 
         {/* Products */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[16px] transition-all">
-          {productsToShow.map((product, key) => (
+          {productsToShow.map((product, i) => (
             <Product
-              key={key}
+              ref={(el) => (productRefs.current[i] = el)}
+              key={i}
               product={product}
               isSelected={selectedProducts.some((p) => p.id === product.id)}
               handleProductSelection={handleProductSelection}

@@ -2,11 +2,12 @@ import type { ProductInterface } from "../types/types";
 
 type ProductProps = {
   product: ProductInterface;
+  ref: React.RefObject<(HTMLDivElement | null)[]>;
   isSelected: boolean;
   handleProductSelection: (id: number) => void;
 };
 
-export default function Product({ product, isSelected, handleProductSelection }: ProductProps) {
+export default function Product({ ref, product, isSelected, handleProductSelection }: ProductProps) {
   const {
     id,
     name,
@@ -22,7 +23,7 @@ export default function Product({ product, isSelected, handleProductSelection }:
     installment,
   } = product;
   return (
-    <div className="flex flex-col gap-y-6 p-6 bg-white rounded-xl">
+    <div ref={ref} className="flex flex-col gap-y-6 p-6 bg-white rounded-xl">
       <div className="w-2/3 self-center">
         <img src={`${import.meta.env.VITE_BASE}${img}`} alt="product name" className="w-full h-full" />
       </div>
