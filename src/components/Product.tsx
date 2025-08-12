@@ -36,7 +36,7 @@ const Product = forwardRef<HTMLDivElement, ProductProps>(({ product, isSelected,
   return (
     <div ref={ref} className="flex flex-col gap-y-6 p-6 bg-white rounded-xl">
       <div className="w-2/3 self-center">
-        <img src={`${import.meta.env.VITE_BASE}${img}`} alt="product name" className="w-full h-full" />
+        <img src={`${img}`} alt={`${name} img`} className="w-full h-full" />
       </div>
       <h3 className="text-lg font-semibold">
         {name}, Pralka {type}, {capacity.replace(".", ",")}, {color}
